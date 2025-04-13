@@ -1,4 +1,6 @@
 About the Project: SnortEduGuard – Student Integrity Surveillance System
+
+
 As a Teaching Assistant at the University of Maryland, I often oversee lab sessions, in-class quizzes, and exams. Over time, I noticed a recurring issue—students frequently attempt to bypass academic integrity policies by using generative AI tools, cheating platforms, or VPNs to evade detection. While institutions rely on browser lockdown software like LockDown Browser or proctoring tools, these are not foolproof. As someone passionate about cybersecurity, I wanted to design a system that works at the network level, giving instructors real-time visibility into potentially unauthorized activity.
 
 That motivation led to the creation of SnortEduGuard, a production-ready academic intrusion detection system (IDS) that detects, logs, filters, and summarizes network traffic during exams or classroom sessions. The goal was to build a system that’s not only technically sound, but also useful in real-world academic settings.
@@ -16,5 +18,8 @@ One of the most difficult challenges I faced was configuring Snort 3 logging on 
 Through this project, I gained deep hands-on experience with packet inspection, Snort rule design, real-time log processing, and integrating AI into cybersecurity tooling. I also learned how to present technical data in a visual and usable format for end users, which is critical in applied security contexts.
 
 SnortEduGuard is more than a demo—it’s a system that could be deployed in a real classroom, lab, or exam setting. It encourages academic integrity not through surveillance, but by promoting awareness and visibility. It shows how cybersecurity techniques like rule-based detection, log analysis, and AI-enhanced summarization can be adapted for educational environments to make them more secure, transparent, and fair.
+
+<img width="452" alt="image" src="https://github.com/user-attachments/assets/c4b2e569-f319-48c4-a9f1-8afa37045b02" />
+
 
 
