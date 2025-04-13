@@ -1,0 +1,441 @@
+--------------------------------------------------
+o")~   Snort++ 3.7.2.0
+--------------------------------------------------
+Loading /usr/local/etc/snort/snort.lua:
+Loading /opt/homebrew/etc/snort/snort_defaults.lua:
+Finished /opt/homebrew/etc/snort/snort_defaults.lua:
+	alerts
+	daq
+	decode
+	host_cache
+	network
+	packets
+	process
+	search_engine
+	so_proxy
+	stream
+	stream_icmp
+	stream_udp
+	stream_user
+	stream_file
+	arp_spoof
+	back_orifice
+	dns
+	imap
+	netflow
+	normalizer
+	pop
+	sip
+	ssh
+	cip
+	dnp3
+	mms
+	s7commplus
+	dce_tcp
+	dce_http_proxy
+	port_scan
+	ftp_server
+	ftp_data
+	http_inspect
+	js_norm
+	appid
+	wizard
+	alert_fast
+	ips
+	references
+	classifications
+	binder
+	file_policy
+	http2_inspect
+	ftp_client
+	smtp
+	gtp_inspect
+	dce_http_server
+	dce_udp
+	dce_smb
+	modbus
+	iec104
+	telnet
+	ssl
+	rpc_decode
+	stream_tcp
+	stream_ip
+	trace
+	host_tracker
+	hosts
+	output
+	active
+Finished /usr/local/etc/snort/snort.lua:
+Loading /usr/local/etc/snort/rules/local.rules:
+Finished /usr/local/etc/snort/rules/local.rules:
+--------------------------------------------------
+pcre counts
+               pcre_rules: 1
+              pcre_native: 1
+--------------------------------------------------
+ips policies rule stats
+              id  loaded  shared enabled    file
+               0     654       5     654    /usr/local/etc/snort/snort.lua
+--------------------------------------------------
+rule counts
+       total rules loaded: 654
+          duplicate rules: 5
+               text rules: 29
+            builtin rules: 625
+            option chains: 654
+            chain headers: 11
+--------------------------------------------------
+port rule counts
+             tcp     udp    icmp      ip
+     any     626       0       1       0
+     dst      25       1       0       0
+   total     651       1       1       0
+--------------------------------------------------
+service rule counts          to-srv  to-cli
+                     http:        1       0
+                    http2:        1       0
+                    http3:        1       0
+                    total:        3       0
+--------------------------------------------------
+fast pattern groups
+                      dst: 4
+                      any: 2
+                to_server: 3
+--------------------------------------------------
+search engine (ac_bnfa)
+                instances: 6
+                 patterns: 29
+            pattern chars: 325
+               num states: 309
+         num match states: 29
+             memory scale: KB
+             total memory: 15.0381
+           pattern memory: 1.44434
+        match list memory: 3.32031
+        transition memory: 9.52344
+        fast pattern only: 1
+appid: MaxRss diff: 2916352
+appid: patterns loaded: 300
+--------------------------------------------------
+pcap DAQ configured to passive.
+Commencing packet processing
+++ [0] en0
+04/12-13:16:53.885313 [**] [116:414:1] "(ipv4) IPv4 packet to broadcast dest address" [**] [Priority: 3] {UDP} 0.0.0.0:68 -> 255.255.255.255:67
+04/12-13:16:53.885313 [**] [116:408:1] "(ipv4) IPv4 packet from 'current net' source address" [**] [Priority: 3] {UDP} 0.0.0.0:68 -> 255.255.255.255:67
+04/12-13:16:55.932749 [**] [116:414:1] "(ipv4) IPv4 packet to broadcast dest address" [**] [Priority: 3] {UDP} 0.0.0.0:68 -> 255.255.255.255:67
+04/12-13:16:55.932749 [**] [116:408:1] "(ipv4) IPv4 packet from 'current net' source address" [**] [Priority: 3] {UDP} 0.0.0.0:68 -> 255.255.255.255:67
+04/12-13:16:57.971909 [**] [116:414:1] "(ipv4) IPv4 packet to broadcast dest address" [**] [Priority: 3] {UDP} 172.23.31.1:10004 -> 255.255.255.255:10004
+04/12-13:16:57.982445 [**] [1:1000001:1] "ICMP Ping Detected" [**] [Priority: 0] {ICMP} fe80::1e27:48c3:9065:ef83 -> ff02::1
+04/12-13:16:58.068366 [**] [1:1000001:1] "ICMP Ping Detected" [**] [Priority: 0] {ICMP} fe80::4bd:173f:ad99:e677 -> ff02::1:ff0a:66f6
+04/12-13:16:58.075551 [**] [1:1000001:1] "ICMP Ping Detected" [**] [Priority: 0] {ICMP} fe80::14d2:bf0e:2f0a:66f6 -> fe80::4bd:173f:ad99:e677
+04/12-13:16:58.988943 [**] [116:414:1] "(ipv4) IPv4 packet to broadcast dest address" [**] [Priority: 3] {UDP} 0.0.0.0:68 -> 255.255.255.255:67
+04/12-13:16:58.988943 [**] [116:408:1] "(ipv4) IPv4 packet from 'current net' source address" [**] [Priority: 3] {UDP} 0.0.0.0:68 -> 255.255.255.255:67
+04/12-13:16:59.371298 [**] [1:1000001:1] "ICMP Ping Detected" [**] [Priority: 0] {ICMP} fe80::4bd:173f:ad99:e677 -> fe80::103b:23c8:61c9:9c0d
+04/12-13:17:00.025831 [**] [116:414:1] "(ipv4) IPv4 packet to broadcast dest address" [**] [Priority: 3] {UDP} 0.0.0.0:68 -> 255.255.255.255:67
+04/12-13:17:00.025831 [**] [116:408:1] "(ipv4) IPv4 packet from 'current net' source address" [**] [Priority: 3] {UDP} 0.0.0.0:68 -> 255.255.255.255:67
+04/12-13:17:00.382578 [**] [1:1000001:1] "ICMP Ping Detected" [**] [Priority: 0] {ICMP} fe80::4bd:173f:ad99:e677 -> fe80::103b:23c8:61c9:9c0d
+04/12-13:17:01.393090 [**] [1:1000001:1] "ICMP Ping Detected" [**] [Priority: 0] {ICMP} fe80::4bd:173f:ad99:e677 -> fe80::103b:23c8:61c9:9c0d
+04/12-13:17:02.078316 [**] [116:414:1] "(ipv4) IPv4 packet to broadcast dest address" [**] [Priority: 3] {UDP} 0.0.0.0:68 -> 255.255.255.255:67
+04/12-13:17:02.078316 [**] [116:408:1] "(ipv4) IPv4 packet from 'current net' source address" [**] [Priority: 3] {UDP} 0.0.0.0:68 -> 255.255.255.255:67
+04/12-13:17:02.079793 [**] [116:414:1] "(ipv4) IPv4 packet to broadcast dest address" [**] [Priority: 3] {UDP} 0.0.0.0:68 -> 255.255.255.255:67
+04/12-13:17:02.079793 [**] [116:408:1] "(ipv4) IPv4 packet from 'current net' source address" [**] [Priority: 3] {UDP} 0.0.0.0:68 -> 255.255.255.255:67
+04/12-13:17:05.142837 [**] [1:1000001:1] "ICMP Ping Detected" [**] [Priority: 0] {ICMP} fe80::cd26:e8fd:f34c:b3ce -> ff02::1
+04/12-13:17:05.148058 [**] [116:414:1] "(ipv4) IPv4 packet to broadcast dest address" [**] [Priority: 3] {UDP} 0.0.0.0:68 -> 255.255.255.255:67
+04/12-13:17:05.148058 [**] [116:408:1] "(ipv4) IPv4 packet from 'current net' source address" [**] [Priority: 3] {UDP} 0.0.0.0:68 -> 255.255.255.255:67
+04/12-13:17:05.152062 [**] [116:414:1] "(ipv4) IPv4 packet to broadcast dest address" [**] [Priority: 3] {UDP} 0.0.0.0:68 -> 255.255.255.255:67
+04/12-13:17:05.152062 [**] [116:408:1] "(ipv4) IPv4 packet from 'current net' source address" [**] [Priority: 3] {UDP} 0.0.0.0:68 -> 255.255.255.255:67
+04/12-13:17:09.232982 [**] [116:414:1] "(ipv4) IPv4 packet to broadcast dest address" [**] [Priority: 3] {UDP} 0.0.0.0:68 -> 255.255.255.255:67
+04/12-13:17:09.232982 [**] [116:408:1] "(ipv4) IPv4 packet from 'current net' source address" [**] [Priority: 3] {UDP} 0.0.0.0:68 -> 255.255.255.255:67
+04/12-13:17:10.255163 [**] [116:414:1] "(ipv4) IPv4 packet to broadcast dest address" [**] [Priority: 3] {UDP} 172.23.31.1:10004 -> 255.255.255.255:10004
+04/12-13:17:12.313277 [**] [116:414:1] "(ipv4) IPv4 packet to broadcast dest address" [**] [Priority: 3] {UDP} 0.0.0.0:68 -> 255.255.255.255:67
+04/12-13:17:12.313277 [**] [116:408:1] "(ipv4) IPv4 packet from 'current net' source address" [**] [Priority: 3] {UDP} 0.0.0.0:68 -> 255.255.255.255:67
+04/12-13:17:13.326817 [**] [116:414:1] "(ipv4) IPv4 packet to broadcast dest address" [**] [Priority: 3] {UDP} 172.23.31.1:10004 -> 255.255.255.255:10004
+04/12-13:17:13.334109 [**] [1:1000001:1] "ICMP Ping Detected" [**] [Priority: 0] {ICMP} :: -> ff02::1
+04/12-13:17:13.336340 [**] [116:414:1] "(ipv4) IPv4 packet to broadcast dest address" [**] [Priority: 3] {UDP} 0.0.0.0:68 -> 255.255.255.255:67
+04/12-13:17:13.336340 [**] [116:408:1] "(ipv4) IPv4 packet from 'current net' source address" [**] [Priority: 3] {UDP} 0.0.0.0:68 -> 255.255.255.255:67
+04/12-13:17:13.338951 [**] [116:414:1] "(ipv4) IPv4 packet to broadcast dest address" [**] [Priority: 3] {UDP} 0.0.0.0:68 -> 255.255.255.255:67
+04/12-13:17:13.338951 [**] [116:408:1] "(ipv4) IPv4 packet from 'current net' source address" [**] [Priority: 3] {UDP} 0.0.0.0:68 -> 255.255.255.255:67
+04/12-13:17:15.386548 [**] [116:414:1] "(ipv4) IPv4 packet to broadcast dest address" [**] [Priority: 3] {UDP} 172.23.30.8:17500 -> 255.255.255.255:17500
+04/12-13:17:15.388029 [**] [116:414:1] "(ipv4) IPv4 packet to broadcast dest address" [**] [Priority: 3] {UDP} 172.23.30.8:17500 -> 255.255.255.255:17500
+04/12-13:17:15.388032 [**] [116:414:1] "(ipv4) IPv4 packet to broadcast dest address" [**] [Priority: 3] {UDP} 172.23.30.8:17500 -> 255.255.255.255:17500
+04/12-13:17:15.388033 [**] [116:414:1] "(ipv4) IPv4 packet to broadcast dest address" [**] [Priority: 3] {UDP} 172.23.30.8:17500 -> 255.255.255.255:17500
+04/12-13:17:15.388034 [**] [116:414:1] "(ipv4) IPv4 packet to broadcast dest address" [**] [Priority: 3] {UDP} 172.23.30.8:17500 -> 255.255.255.255:17500
+04/12-13:17:15.389209 [**] [116:414:1] "(ipv4) IPv4 packet to broadcast dest address" [**] [Priority: 3] {UDP} 172.23.30.8:17500 -> 255.255.255.255:17500
+04/12-13:17:15.389212 [**] [116:414:1] "(ipv4) IPv4 packet to broadcast dest address" [**] [Priority: 3] {UDP} 172.23.30.8:17500 -> 255.255.255.255:17500
+04/12-13:17:16.408291 [**] [116:414:1] "(ipv4) IPv4 packet to broadcast dest address" [**] [Priority: 3] {UDP} 0.0.0.0:68 -> 255.255.255.255:67
+04/12-13:17:16.408291 [**] [116:408:1] "(ipv4) IPv4 packet from 'current net' source address" [**] [Priority: 3] {UDP} 0.0.0.0:68 -> 255.255.255.255:67
+04/12-13:17:16.410457 [**] [116:414:1] "(ipv4) IPv4 packet to broadcast dest address" [**] [Priority: 3] {UDP} 0.0.0.0:68 -> 255.255.255.255:67
+04/12-13:17:16.410457 [**] [116:408:1] "(ipv4) IPv4 packet from 'current net' source address" [**] [Priority: 3] {UDP} 0.0.0.0:68 -> 255.255.255.255:67
+04/12-13:17:16.416391 [**] [1:1000001:1] "ICMP Ping Detected" [**] [Priority: 0] {ICMP} fe80::d0a4:7333:310b:4854 -> ff02::1
+04/12-13:17:18.444996 [**] [116:414:1] "(ipv4) IPv4 packet to broadcast dest address" [**] [Priority: 3] {UDP} 172.23.31.1:10004 -> 255.255.255.255:10004
+04/12-13:17:23.570567 [**] [116:414:1] "(ipv4) IPv4 packet to broadcast dest address" [**] [Priority: 3] {UDP} 172.23.31.1:10004 -> 255.255.255.255:10004
+04/12-13:17:25.613275 [**] [116:414:1] "(ipv4) IPv4 packet to broadcast dest address" [**] [Priority: 3] {UDP} 0.0.0.0:68 -> 255.255.255.255:67
+04/12-13:17:25.613275 [**] [116:408:1] "(ipv4) IPv4 packet from 'current net' source address" [**] [Priority: 3] {UDP} 0.0.0.0:68 -> 255.255.255.255:67
+04/12-13:17:27.679556 [**] [116:414:1] "(ipv4) IPv4 packet to broadcast dest address" [**] [Priority: 3] {UDP} 172.23.29.125:17500 -> 255.255.255.255:17500
+04/12-13:17:29.709218 [**] [116:414:1] "(ipv4) IPv4 packet to broadcast dest address" [**] [Priority: 3] {UDP} 172.23.31.1:10004 -> 255.255.255.255:10004
+04/12-13:17:29.722352 [**] [116:414:1] "(ipv4) IPv4 packet to broadcast dest address" [**] [Priority: 3] {UDP} 0.0.0.0:68 -> 255.255.255.255:67
+04/12-13:17:29.722352 [**] [116:408:1] "(ipv4) IPv4 packet from 'current net' source address" [**] [Priority: 3] {UDP} 0.0.0.0:68 -> 255.255.255.255:67
+04/12-13:17:33.807181 [**] [116:414:1] "(ipv4) IPv4 packet to broadcast dest address" [**] [Priority: 3] {UDP} 172.23.30.215:58416 -> 255.255.255.255:22222
+04/12-13:17:33.807189 [**] [116:414:1] "(ipv4) IPv4 packet to broadcast dest address" [**] [Priority: 3] {UDP} 172.23.30.215:10004 -> 255.255.255.255:10004
+04/12-13:17:33.807191 [**] [116:414:1] "(ipv4) IPv4 packet to broadcast dest address" [**] [Priority: 3] {UDP} 172.23.30.215:10004 -> 255.255.255.255:10004
+04/12-13:17:33.807193 [**] [116:414:1] "(ipv4) IPv4 packet to broadcast dest address" [**] [Priority: 3] {UDP} 172.23.30.215:10004 -> 255.255.255.255:10004
+04/12-13:17:33.807194 [**] [116:414:1] "(ipv4) IPv4 packet to broadcast dest address" [**] [Priority: 3] {UDP} 172.23.30.215:10004 -> 255.255.255.255:10004
+04/12-13:17:33.807195 [**] [116:414:1] "(ipv4) IPv4 packet to broadcast dest address" [**] [Priority: 3] {UDP} 172.23.30.215:10004 -> 255.255.255.255:10004
+04/12-13:17:33.807196 [**] [116:414:1] "(ipv4) IPv4 packet to broadcast dest address" [**] [Priority: 3] {UDP} 172.23.30.215:58417 -> 255.255.255.255:22222
+04/12-13:17:33.810478 [**] [116:414:1] "(ipv4) IPv4 packet to broadcast dest address" [**] [Priority: 3] {UDP} 172.23.30.215:58422 -> 255.255.255.255:22222
+04/12-13:17:33.810480 [**] [116:414:1] "(ipv4) IPv4 packet to broadcast dest address" [**] [Priority: 3] {UDP} 172.23.30.215:58419 -> 255.255.255.255:22222
+04/12-13:17:33.810481 [**] [116:414:1] "(ipv4) IPv4 packet to broadcast dest address" [**] [Priority: 3] {UDP} 172.23.30.215:58421 -> 255.255.255.255:22222
+04/12-13:17:33.810483 [**] [116:414:1] "(ipv4) IPv4 packet to broadcast dest address" [**] [Priority: 3] {UDP} 172.23.30.215:58423 -> 255.255.255.255:3289
+04/12-13:17:33.810485 [**] [116:414:1] "(ipv4) IPv4 packet to broadcast dest address" [**] [Priority: 3] {UDP} 172.23.30.215:58426 -> 255.255.255.255:3289
+04/12-13:17:33.810486 [**] [116:414:1] "(ipv4) IPv4 packet to broadcast dest address" [**] [Priority: 3] {UDP} 172.23.30.215:58427 -> 255.255.255.255:3289
+04/12-13:17:34.846994 [**] [116:414:1] "(ipv4) IPv4 packet to broadcast dest address" [**] [Priority: 3] {UDP} 172.23.31.1:10004 -> 255.255.255.255:10004
+04/12-13:17:35.020678 [**] [112:1:1] "(arp_spoof) unicast ARP request" [**] [Priority: 3] {ARP}  -> 
+04/12-13:17:36.883124 [**] [116:414:1] "(ipv4) IPv4 packet to broadcast dest address" [**] [Priority: 3] {UDP} 172.23.31.1:10004 -> 255.255.255.255:10004
+04/12-13:17:38.928804 [**] [116:414:1] "(ipv4) IPv4 packet to broadcast dest address" [**] [Priority: 3] {UDP} 172.23.30.215:58416 -> 255.255.255.255:22222
+04/12-13:17:38.929947 [**] [116:414:1] "(ipv4) IPv4 packet to broadcast dest address" [**] [Priority: 3] {UDP} 172.23.30.215:58422 -> 255.255.255.255:22222
+04/12-13:17:38.929954 [**] [116:414:1] "(ipv4) IPv4 packet to broadcast dest address" [**] [Priority: 3] {UDP} 172.23.30.215:58413 -> 255.255.255.255:22222
+04/12-13:17:38.929956 [**] [116:414:1] "(ipv4) IPv4 packet to broadcast dest address" [**] [Priority: 3] {UDP} 172.23.30.215:58418 -> 255.255.255.255:22222
+04/12-13:17:38.929958 [**] [116:414:1] "(ipv4) IPv4 packet to broadcast dest address" [**] [Priority: 3] {UDP} 172.23.30.215:58414 -> 255.255.255.255:22222
+04/12-13:17:38.929961 [**] [116:414:1] "(ipv4) IPv4 packet to broadcast dest address" [**] [Priority: 3] {UDP} 172.23.30.215:58419 -> 255.255.255.255:22222
+04/12-13:17:38.929963 [**] [116:414:1] "(ipv4) IPv4 packet to broadcast dest address" [**] [Priority: 3] {UDP} 172.23.30.215:58421 -> 255.255.255.255:22222
+04/12-13:17:38.929965 [**] [116:414:1] "(ipv4) IPv4 packet to broadcast dest address" [**] [Priority: 3] {UDP} 172.23.30.215:58423 -> 255.255.255.255:3289
+04/12-13:17:38.931469 [**] [116:414:1] "(ipv4) IPv4 packet to broadcast dest address" [**] [Priority: 3] {UDP} 172.23.30.215:58427 -> 255.255.255.255:3289
+04/12-13:17:38.931480 [**] [116:414:1] "(ipv4) IPv4 packet to broadcast dest address" [**] [Priority: 3] {UDP} 172.23.30.215:58424 -> 255.255.255.255:3289
+04/12-13:17:38.931481 [**] [116:414:1] "(ipv4) IPv4 packet to broadcast dest address" [**] [Priority: 3] {UDP} 172.23.30.215:58426 -> 255.255.255.255:3289
+04/12-13:17:38.931483 [**] [116:414:1] "(ipv4) IPv4 packet to broadcast dest address" [**] [Priority: 3] {UDP} 172.23.30.215:58417 -> 255.255.255.255:22222
+04/12-13:17:38.931485 [**] [116:414:1] "(ipv4) IPv4 packet to broadcast dest address" [**] [Priority: 3] {UDP} 172.23.30.215:10004 -> 255.255.255.255:10004
+04/12-13:17:38.931488 [**] [116:414:1] "(ipv4) IPv4 packet to broadcast dest address" [**] [Priority: 3] {UDP} 172.23.30.215:10004 -> 255.255.255.255:10004
+04/12-13:17:38.931490 [**] [116:414:1] "(ipv4) IPv4 packet to broadcast dest address" [**] [Priority: 3] {UDP} 172.23.30.215:10004 -> 255.255.255.255:10004
+04/12-13:17:38.931492 [**] [116:414:1] "(ipv4) IPv4 packet to broadcast dest address" [**] [Priority: 3] {UDP} 172.23.30.215:10004 -> 255.255.255.255:10004
+04/12-13:17:38.931494 [**] [116:414:1] "(ipv4) IPv4 packet to broadcast dest address" [**] [Priority: 3] {UDP} 172.23.30.215:10004 -> 255.255.255.255:10004
+04/12-13:17:39.959276 [**] [116:414:1] "(ipv4) IPv4 packet to broadcast dest address" [**] [Priority: 3] {UDP} 0.0.0.0:68 -> 255.255.255.255:67
+04/12-13:17:39.959276 [**] [116:408:1] "(ipv4) IPv4 packet from 'current net' source address" [**] [Priority: 3] {UDP} 0.0.0.0:68 -> 255.255.255.255:67
+04/12-13:17:39.963151 [**] [116:414:1] "(ipv4) IPv4 packet to broadcast dest address" [**] [Priority: 3] {UDP} 0.0.0.0:68 -> 255.255.255.255:67
+04/12-13:17:39.963151 [**] [116:408:1] "(ipv4) IPv4 packet from 'current net' source address" [**] [Priority: 3] {UDP} 0.0.0.0:68 -> 255.255.255.255:67
+04/12-13:17:43.031621 [**] [116:414:1] "(ipv4) IPv4 packet to broadcast dest address" [**] [Priority: 3] {UDP} 0.0.0.0:68 -> 255.255.255.255:67
+04/12-13:17:43.031621 [**] [116:408:1] "(ipv4) IPv4 packet from 'current net' source address" [**] [Priority: 3] {UDP} 0.0.0.0:68 -> 255.255.255.255:67
+04/12-13:17:43.038404 [**] [116:414:1] "(ipv4) IPv4 packet to broadcast dest address" [**] [Priority: 3] {UDP} 172.23.31.1:10004 -> 255.255.255.255:10004
+04/12-13:17:43.039775 [**] [116:414:1] "(ipv4) IPv4 packet to broadcast dest address" [**] [Priority: 3] {UDP} 0.0.0.0:68 -> 255.255.255.255:67
+04/12-13:17:43.039775 [**] [116:408:1] "(ipv4) IPv4 packet from 'current net' source address" [**] [Priority: 3] {UDP} 0.0.0.0:68 -> 255.255.255.255:67
+04/12-13:17:43.041006 [**] [116:414:1] "(ipv4) IPv4 packet to broadcast dest address" [**] [Priority: 3] {UDP} 0.0.0.0:68 -> 255.255.255.255:67
+04/12-13:17:43.041006 [**] [116:408:1] "(ipv4) IPv4 packet from 'current net' source address" [**] [Priority: 3] {UDP} 0.0.0.0:68 -> 255.255.255.255:67
+04/12-13:17:44.063014 [**] [116:414:1] "(ipv4) IPv4 packet to broadcast dest address" [**] [Priority: 3] {UDP} 172.23.29.6:49285 -> 255.255.255.255:8610
+04/12-13:17:44.063016 [**] [116:414:1] "(ipv4) IPv4 packet to broadcast dest address" [**] [Priority: 3] {UDP} 172.23.29.6:49285 -> 255.255.255.255:8610
+04/12-13:17:44.319144 [**] [129:14:1] "(stream_tcp) TCP timestamp is missing" [**] [Priority: 3] {TCP} 172.23.28.251:64774 -> 140.82.112.26:443
+04/12-13:17:45.084069 [**] [116:414:1] "(ipv4) IPv4 packet to broadcast dest address" [**] [Priority: 3] {UDP} 172.23.31.1:10004 -> 255.255.255.255:10004
+04/12-13:17:49.169775 [**] [116:414:1] "(ipv4) IPv4 packet to broadcast dest address" [**] [Priority: 3] {UDP} 172.23.29.76:64548 -> 255.255.255.255:161
+04/12-13:17:49.169777 [**] [116:414:1] "(ipv4) IPv4 packet to broadcast dest address" [**] [Priority: 3] {UDP} 172.23.29.76:64546 -> 255.255.255.255:161
+04/12-13:17:49.172567 [**] [116:414:1] "(ipv4) IPv4 packet to broadcast dest address" [**] [Priority: 3] {UDP} 172.23.31.1:10004 -> 255.255.255.255:10004
+04/12-13:17:50.192666 [**] [116:414:1] "(ipv4) IPv4 packet to broadcast dest address" [**] [Priority: 3] {UDP} 172.23.31.47:68 -> 255.255.255.255:67
+04/12-13:17:52.248094 [**] [1:1000001:1] "ICMP Ping Detected" [**] [Priority: 0] {ICMP} fe80::f761:9c46:381b:b417 -> ff02::1
+04/12-13:17:53.264132 [**] [116:414:1] "(ipv4) IPv4 packet to broadcast dest address" [**] [Priority: 3] {UDP} 172.23.31.1:10004 -> 255.255.255.255:10004
+04/12-13:17:56.341306 [**] [116:414:1] "(ipv4) IPv4 packet to broadcast dest address" [**] [Priority: 3] {UDP} 172.23.31.1:10004 -> 255.255.255.255:10004
+04/12-13:17:57.368210 [**] [116:414:1] "(ipv4) IPv4 packet to broadcast dest address" [**] [Priority: 3] {UDP} 0.0.0.0:68 -> 255.255.255.255:67
+04/12-13:17:57.368210 [**] [116:408:1] "(ipv4) IPv4 packet from 'current net' source address" [**] [Priority: 3] {UDP} 0.0.0.0:68 -> 255.255.255.255:67
+04/12-13:17:57.374869 [**] [116:414:1] "(ipv4) IPv4 packet to broadcast dest address" [**] [Priority: 3] {UDP} 172.23.31.1:10004 -> 255.255.255.255:10004
+04/12-13:17:57.376077 [**] [116:414:1] "(ipv4) IPv4 packet to broadcast dest address" [**] [Priority: 3] {UDP} 0.0.0.0:68 -> 255.255.255.255:67
+04/12-13:17:57.376077 [**] [116:408:1] "(ipv4) IPv4 packet from 'current net' source address" [**] [Priority: 3] {UDP} 0.0.0.0:68 -> 255.255.255.255:67
+04/12-13:17:58.464509 [**] [1:1000001:1] "ICMP Ping Detected" [**] [Priority: 0] {ICMP} fe80::4bd:173f:ad99:e677 -> fe80::479:704c:b9cb:9b2e
+04/12-13:17:59.409396 [**] [1:1000001:1] "ICMP Ping Detected" [**] [Priority: 0] {ICMP} fe80::79d3:dce5:5a47:c4ad -> ff02::1
+04/12-13:17:59.422813 [**] [1:1000001:1] "ICMP Ping Detected" [**] [Priority: 0] {ICMP} fe80::c3b2:6d8b:73cb:b45b -> ff02::1
+04/12-13:17:59.474664 [**] [1:1000001:1] "ICMP Ping Detected" [**] [Priority: 0] {ICMP} fe80::4bd:173f:ad99:e677 -> fe80::479:704c:b9cb:9b2e
+04/12-13:18:00.437220 [**] [116:414:1] "(ipv4) IPv4 packet to broadcast dest address" [**] [Priority: 3] {UDP} 0.0.0.0:68 -> 255.255.255.255:67
+04/12-13:18:00.437220 [**] [116:408:1] "(ipv4) IPv4 packet from 'current net' source address" [**] [Priority: 3] {UDP} 0.0.0.0:68 -> 255.255.255.255:67
+04/12-13:18:00.438384 [**] [116:414:1] "(ipv4) IPv4 packet to broadcast dest address" [**] [Priority: 3] {UDP} 0.0.0.0:68 -> 255.255.255.255:67
+04/12-13:18:00.438384 [**] [116:408:1] "(ipv4) IPv4 packet from 'current net' source address" [**] [Priority: 3] {UDP} 0.0.0.0:68 -> 255.255.255.255:67
+04/12-13:18:00.449111 [**] [116:414:1] "(ipv4) IPv4 packet to broadcast dest address" [**] [Priority: 3] {UDP} 172.23.30.215:58416 -> 255.255.255.255:22222
+04/12-13:18:00.449114 [**] [116:414:1] "(ipv4) IPv4 packet to broadcast dest address" [**] [Priority: 3] {UDP} 172.23.30.215:58413 -> 255.255.255.255:22222
+04/12-13:18:00.449116 [**] [116:414:1] "(ipv4) IPv4 packet to broadcast dest address" [**] [Priority: 3] {UDP} 172.23.30.215:58414 -> 255.255.255.255:22222
+04/12-13:18:00.485508 [**] [1:1000001:1] "ICMP Ping Detected" [**] [Priority: 0] {ICMP} fe80::4bd:173f:ad99:e677 -> fe80::479:704c:b9cb:9b2e
+04/12-13:18:01.453123 [**] [116:414:1] "(ipv4) IPv4 packet to broadcast dest address" [**] [Priority: 3] {UDP} 172.23.30.215:10004 -> 255.255.255.255:10004
+04/12-13:18:01.464164 [**] [1:1000001:1] "ICMP Ping Detected" [**] [Priority: 0] {ICMP} :: -> ff02::1
+04/12-13:18:02.480848 [**] [116:414:1] "(ipv4) IPv4 packet to broadcast dest address" [**] [Priority: 3] {UDP} 0.0.0.0:68 -> 255.255.255.255:67
+04/12-13:18:02.480848 [**] [116:408:1] "(ipv4) IPv4 packet from 'current net' source address" [**] [Priority: 3] {UDP} 0.0.0.0:68 -> 255.255.255.255:67
+04/12-13:18:02.485187 [**] [116:414:1] "(ipv4) IPv4 packet to broadcast dest address" [**] [Priority: 3] {UDP} 0.0.0.0:68 -> 255.255.255.255:67
+04/12-13:18:02.485187 [**] [116:408:1] "(ipv4) IPv4 packet from 'current net' source address" [**] [Priority: 3] {UDP} 0.0.0.0:68 -> 255.255.255.255:67
+04/12-13:18:03.566299 [**] [112:1:1] "(arp_spoof) unicast ARP request" [**] [Priority: 3] {ARP}  -> 
+04/12-13:18:03.566382 [**] [112:1:1] "(arp_spoof) unicast ARP request" [**] [Priority: 3] {ARP}  -> 
+04/12-13:18:06.581810 [**] [116:414:1] "(ipv4) IPv4 packet to broadcast dest address" [**] [Priority: 3] {UDP} 172.23.31.1:10004 -> 255.255.255.255:10004
+04/12-13:18:08.639116 [**] [116:414:1] "(ipv4) IPv4 packet to broadcast dest address" [**] [Priority: 3] {UDP} 0.0.0.0:68 -> 255.255.255.255:67
+04/12-13:18:08.639116 [**] [116:408:1] "(ipv4) IPv4 packet from 'current net' source address" [**] [Priority: 3] {UDP} 0.0.0.0:68 -> 255.255.255.255:67
+04/12-13:18:11.702359 [**] [116:444:1] "(ipv4) IPv4 option set" [**] [Priority: 3] {IP} 172.23.30.207 -> 224.0.0.251
+04/12-13:18:11.706248 [**] [116:444:1] "(ipv4) IPv4 option set" [**] [Priority: 3] {IP} 172.23.30.138 -> 224.0.0.251
+** caught int signal
+== stopping
+04/12-13:18:12.466866 [**] [129:14:1] "(stream_tcp) TCP timestamp is missing" [**] [Priority: 3] {TCP} 172.23.28.251:64776 -> 34.144.254.29:443
+-- [0] en0
+--------------------------------------------------
+Packet Statistics
+--------------------------------------------------
+daq
+                 received: 8235
+                 analyzed: 8233
+                    allow: 8233
+                 rx_bytes: 2513163
+           expected_flows: 2
+--------------------------------------------------
+codec
+                    total: 8233        	(100.000%)
+                      arp: 2087        	( 25.349%)
+                      eth: 8233        	(100.000%)
+                    icmp6: 16          	(  0.194%)
+                     igmp: 2           	(  0.024%)
+                     ipv4: 5385        	( 65.408%)
+                     ipv6: 698         	(  8.478%)
+            ipv6_hop_opts: 2           	(  0.024%)
+                      llc: 63          	(  0.765%)
+                      tcp: 313         	(  3.802%)
+                      udp: 5752        	( 69.865%)
+--------------------------------------------------
+Module Statistics
+--------------------------------------------------
+ac_bnfa
+                 searches: 177
+                    bytes: 111609
+--------------------------------------------------
+ac_full
+                 searches: 942
+                  matches: 26536
+                    bytes: 305580
+--------------------------------------------------
+appid
+                  packets: 6083
+        processed_packets: 6017
+          ignored_packets: 66
+           total_sessions: 700
+       service_cache_adds: 58
+             bytes_in_use: 9744
+             items_in_use: 58
+--------------------------------------------------
+arp_spoof
+                  packets: 2087
+--------------------------------------------------
+back_orifice
+                  packets: 5729
+--------------------------------------------------
+binder
+              raw_packets: 2216
+                new_flows: 590
+          service_changes: 6
+                 inspects: 2806
+--------------------------------------------------
+detection
+                 analyzed: 8233
+               hard_evals: 168
+             raw_searches: 70
+          cooked_searches: 107
+             pkt_searches: 177
+                   alerts: 141
+             total_alerts: 141
+                   logged: 141
+--------------------------------------------------
+dns
+                  packets: 40
+                 requests: 20
+                responses: 20
+--------------------------------------------------
+ips_actions
+                    alert: 141
+--------------------------------------------------
+normalizer
+        test_tcp_trim_win: 1
+           test_tcp_block: 2
+--------------------------------------------------
+port_scan
+                  packets: 6083
+                 trackers: 428
+--------------------------------------------------
+search_engine
+     non_qualified_events: 152
+         qualified_events: 16
+--------------------------------------------------
+ssl
+                  packets: 65
+                  decoded: 65
+             client_hello: 6
+             server_hello: 6
+            change_cipher: 12
+       client_application: 20
+       server_application: 39
+  max_concurrent_sessions: 4
+--------------------------------------------------
+stream
+                    flows: 590
+           expected_flows: 2
+--------------------------------------------------
+stream_icmp
+                 sessions: 11
+                      max: 11
+                  created: 11
+                 released: 11
+--------------------------------------------------
+stream_ip
+                 sessions: 2
+                      max: 2
+                  created: 2
+                 released: 2
+              total_bytes: 16
+--------------------------------------------------
+stream_tcp
+                 sessions: 16
+                      max: 16
+                  created: 16
+                 released: 16
+             instantiated: 16
+                   setups: 16
+                 restarts: 6
+         discards_skipped: 2
+          invalid_seq_num: 1
+                   events: 2
+             syn_trackers: 6
+            data_trackers: 10
+              segs_queued: 109
+            segs_released: 109
+                segs_used: 107
+          rebuilt_packets: 78
+            rebuilt_bytes: 59987
+          client_cleanups: 10
+          server_cleanups: 3
+              established: 6
+                     syns: 6
+                 syn_acks: 6
+                   resets: 2
+                     fins: 25
+                 max_segs: 8
+                max_bytes: 7301
+        keep_alive_probes: 5
+--------------------------------------------------
+stream_udp
+                 sessions: 561
+                      max: 561
+                  created: 669
+                 released: 669
+                 timeouts: 108
+              total_bytes: 2048035
+--------------------------------------------------
+wizard
+                tcp_scans: 30
+                 tcp_hits: 6
+                udp_scans: 541
+               udp_misses: 541
+--------------------------------------------------
+Appid Statistics
+--------------------------------------------------
+detected apps and services
+              Application: Services   Clients    Users      Payloads   Misc       Referred  
+                  unknown: 451        21         3          5          0          0         
+--------------------------------------------------
+Summary Statistics
+--------------------------------------------------
+process
+                  signals: 1
+--------------------------------------------------
+memory
+                allocated: 34286104
+              deallocated: 6667128
+--------------------------------------------------
+timing
+                  runtime: 00:01:21
+                  seconds: 81.847466
+                 pkts/sec: 101
+o")~   Snort exiting

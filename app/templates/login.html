@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login – SnortEduGuard</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background: linear-gradient(to right, #f8f9fa, #e9ecef);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      font-family: 'Segoe UI', sans-serif;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .top-logo-left {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      height: 50px;
+    }
+
+    .top-logo-right {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      height: 50px;
+    }
+
+    .login-card {
+      background: white;
+      padding: 30px 40px;
+      border-radius: 15px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      width: 100%;
+      max-width: 420px;
+      text-align: center;
+      z-index: 10;
+    }
+
+    .form-control {
+      border-radius: 8px;
+      font-size: 16px;
+    }
+
+    .btn-login {
+      border-radius: 8px;
+      font-weight: 600;
+    }
+
+    .footer {
+      font-size: 14px;
+      margin-top: 20px;
+    }
+
+    .footer a {
+      color: #007bff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Logos at top corners -->
+  <img src="{{ url_for('static', filename='umd_logo.png') }}" alt="UMD Logo" class="top-logo-left">
+  <img src="{{ url_for('static', filename='bitcamp2025_logo.png') }}" alt="Bitcamp Logo" class="top-logo-right">
+
+  <!-- Login Card -->
+  <div class="login-card">
+    <h3 class="mb-3">🔐 Instructor Login</h3>
+    <p class="text-muted mb-4">Welcome to <strong>SnortEduGuard</strong> – Student Integrity Surveillance System</p>
+
+    {% if error %}
+      <div class="alert alert-danger py-1">{{ error }}</div>
+    {% endif %}
+
+    <form method="POST">
+      <div class="mb-3 text-start">
+        <label for="username" class="form-label">Username</label>
+        <input type="text" name="username" class="form-control" required placeholder="Enter username">
+      </div>
+
+      <div class="mb-4 text-start">
+        <label for="password" class="form-label">Password</label>
+        <input type="password" name="password" class="form-control" required placeholder="Enter password">
+      </div>
+
+      <button type="submit" class="btn btn-primary w-100 btn-login">Login</button>
+    </form>
+
+    <div class="footer mt-4">
+      Developed by Akshat D. Patel •
+      <a href="https://akshatpatel64.github.io/" target="_blank">Portfolio Website</a>
+    </div>
+  </div>
+
+</body>
+</html>
+
