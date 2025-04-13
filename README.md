@@ -19,6 +19,8 @@ Through this project, I gained deep hands-on experience with packet inspection, 
 
 SnortEduGuard is more than a demo—it’s a system that could be deployed in a real classroom, lab, or exam setting. It encourages academic integrity not through surveillance, but by promoting awareness and visibility. It shows how cybersecurity techniques like rule-based detection, log analysis, and AI-enhanced summarization can be adapted for educational environments to make them more secure, transparent, and fair.
 
+
+
 <img width="452" alt="image" src="https://github.com/user-attachments/assets/c4b2e569-f319-48c4-a9f1-8afa37045b02" />
 
 
