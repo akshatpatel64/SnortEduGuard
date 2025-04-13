@@ -1,6 +1,6 @@
 ## About the Project: SnortEduGuard – Student Integrity Surveillance System
 
-As a Teaching Assistant at the University of Maryland, I often oversee lab sessions, in-class quizzes, and exams. Over time, I noticed a recurring issue—students frequently attempt to bypass academic integrity policies by using generative AI tools, cheating platforms, or VPNs to evade detection.
+As a Teaching Assistant at the University of Maryland, I often oversee lab sessions, in-class quizzes, and exams. Over time, I noticed a recurring issue students frequently attempt to bypass academic integrity policies by using generative AI tools, cheating platforms, or VPNs to evade detection.
 
 While institutions rely on browser lockdown software like LockDown Browser or proctoring tools, these are not foolproof. As someone passionate about cybersecurity, I wanted to design a system that works at the network level, giving instructors real-time visibility into potentially unauthorized activity.
 
@@ -16,7 +16,7 @@ The project is powered by **Snort 3**, a modern packet inspection engine. I wrot
 
 For safe and allowed domains like `umd.edu`, `canvas.instructure.com`, and `zoom.us`, I wrote **whitelist rules** to differentiate authorized traffic from violations.
 
-Snort writes all detected alerts to a log file called `alert.fast`. I developed a Python script (`parse_alerts.py`) that uses regular expressions to extract useful metadata from each alert—such as timestamp, IPs, protocol, SID, and priority—and then writes that data to a structured JSON file (`parsed_alerts.json`). This JSON powers the real-time dashboard.
+Snort writes all detected alerts to a log file called `alert.fast`. I developed a Python script (`parse_alerts.py`) that uses regular expressions to extract useful metadata from each alert such as timestamp, IPs, protocol, SID, and priority and then writes that data to a structured JSON file (`parsed_alerts.json`). This JSON powers the real-time dashboard.
 
 The **dashboard** itself is built using **Flask**, **Chart.js**, and **Bootstrap 5**. It:
 
@@ -46,9 +46,9 @@ Under the hood, the query is parsed using **spaCy NLP** (`parse_query.py`), cate
 
 ---
 
-One of the biggest technical challenges was configuring Snort 3 logging on macOS—especially using Lua configs and preserving logs with `tee` without blocking. Designing the parser to safely monitor logs in near real-time also required careful engineering.
+One of the biggest technical challenges was configuring Snort 3 logging on macOS especially using Lua configs and preserving logs with `tee` without blocking. Designing the parser to safely monitor logs in near real-time also required careful engineering.
 
-The AI integration also took substantial effort—ensuring natural queries mapped accurately to underlying Snort rules and timestamps.
+The AI integration also took substantial effort - ensuring natural queries mapped accurately to underlying Snort rules and timestamps.
 
 Through this project, I gained hands-on experience in:
 
