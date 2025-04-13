@@ -1,27 +1,61 @@
-About the Project: SnortEduGuard – Student Integrity Surveillance System
+## About the Project: SnortEduGuard – Student Integrity Surveillance System
 
+As a Teaching Assistant at the University of Maryland, I often oversee lab sessions, in-class quizzes, and exams. Over time, I noticed a recurring issue—students frequently attempt to bypass academic integrity policies by using generative AI tools, cheating platforms, or VPNs to evade detection.
 
-As a Teaching Assistant at the University of Maryland, I often oversee lab sessions, in-class quizzes, and exams. Over time, I noticed a recurring issue—students frequently attempt to bypass academic integrity policies by using generative AI tools, cheating platforms, or VPNs to evade detection. While institutions rely on browser lockdown software like LockDown Browser or proctoring tools, these are not foolproof. As someone passionate about cybersecurity, I wanted to design a system that works at the network level, giving instructors real-time visibility into potentially unauthorized activity.
+While institutions rely on browser lockdown software like LockDown Browser or proctoring tools, these are not foolproof. As someone passionate about cybersecurity, I wanted to design a system that works at the network level, giving instructors real-time visibility into potentially unauthorized activity.
 
-That motivation led to the creation of SnortEduGuard, a production-ready academic intrusion detection system (IDS) that detects, logs, filters, and summarizes network traffic during exams or classroom sessions. The goal was to build a system that’s not only technically sound, but also useful in real-world academic settings.
+That motivation led to the creation of **SnortEduGuard**, a production-ready academic intrusion detection system (IDS) that detects, logs, filters, and summarizes network traffic during exams or classroom sessions. The goal was to build a system that’s not only technically sound, but also useful in real-world academic settings.
 
-The project is powered by Snort 3, a modern packet inspection engine. I wrote custom rules to detect specific categories of traffic that may indicate academic dishonesty or misuse of resources. These included generative AI tools (such as ChatGPT, Bard, Claude, and Perplexity), study-help sites (Chegg, CourseHero, Quizlet), VPNs (NordVPN, ProtonVPN), collaboration platforms (Discord, Slack, WhatsApp), and even C2 patterns and port scans like Nmap. For safe and allowed domains like umd.edu, canvas.instructure.com, and zoom.us, I added whitelist rules to separate authorized traffic.
+The project is powered by **Snort 3**, a modern packet inspection engine. I wrote custom rules to detect specific categories of traffic that may indicate academic dishonesty or misuse of resources. These included:
 
-Snort writes all detected alerts to a log file called alert.fast. I developed a custom Python script (parse_alerts.py) that uses regular expressions to extract useful information from each alert—such as timestamp, source and destination IPs, protocol, SID, and priority—and then writes that data to a structured JSON file (parsed_alerts.json). This JSON file serves as the data source for the real-time dashboard.
+- Generative AI tools (e.g., ChatGPT, Bard, Claude, Perplexity)
+- Study-help platforms (Chegg, CourseHero, Quizlet)
+- VPN tools (NordVPN, ProtonVPN, Psiphon)
+- Collaboration platforms (Discord, Slack, WhatsApp)
+- Command-and-control (C2) patterns and Nmap port scans
 
-The dashboard itself was built using Flask, Chart.js, and Bootstrap 5. It auto-refreshes every 10 seconds, color-codes alerts by priority, and allows instructors to search, filter, export to CSV or PDF, and visualize alert distribution. I also implemented login functionality and created a modern landing page with University of Maryland and Bitcamp 2025 branding.
+For safe and allowed domains like `umd.edu`, `canvas.instructure.com`, and `zoom.us`, I wrote **whitelist rules** to differentiate authorized traffic from violations.
 
-To elevate the project even further, I added a Smart Search AI Assistant. This feature allows instructors to enter natural language queries like "Show Chegg activity in the last 30 minutes" or "AI access logs today." Behind the scenes, the query is parsed using the spaCy NLP library in parse_query.py, mapped to categories and timestamps, and then passed to smart_filter.py, which filters relevant logs from the alert file. Summaries are then generated using a lightweight summarization engine (summarizer.py) that outputs clean, readable interpretations of what happened—for example, “192.168.1.105 attempted to access ChatGPT at 10:42 AM.”
+Snort writes all detected alerts to a log file called `alert.fast`. I developed a Python script (`parse_alerts.py`) that uses regular expressions to extract useful metadata from each alert—such as timestamp, IPs, protocol, SID, and priority—and then writes that data to a structured JSON file (`parsed_alerts.json`). This JSON powers the real-time dashboard.
 
-One of the most difficult challenges I faced was configuring Snort 3 logging on macOS, particularly working with Lua configs and redirecting output without losing data. Ensuring the parser could safely read logs in real time, without blocking or corrupting the alert.fast file, required careful design. The AI integration also involved significant effort to ensure natural queries would reliably match the right traffic.
+The **dashboard** itself is built using **Flask**, **Chart.js**, and **Bootstrap 5**. It:
 
-Through this project, I gained deep hands-on experience with packet inspection, Snort rule design, real-time log processing, and integrating AI into cybersecurity tooling. I also learned how to present technical data in a visual and usable format for end users, which is critical in applied security contexts.
+- Auto-refreshes every 10 seconds
+- Color-codes alerts by priority
+- Allows instructors to search, filter, and export to CSV or PDF
+- Visualizes alert distributions with interactive charts
+- Supports instructor login and custom UI branding for Bitcamp 2025 and UMD
 
-SnortEduGuard is more than a demo—it’s a system that could be deployed in a real classroom, lab, or exam setting. It encourages academic integrity not through surveillance, but by promoting awareness and visibility. It shows how cybersecurity techniques like rule-based detection, log analysis, and AI-enhanced summarization can be adapted for educational environments to make them more secure, transparent, and fair.
+To elevate functionality, I implemented a **Smart Search AI Assistant**. This lets instructors use natural language prompts like:
 
+> "Show Chegg activity in the last 30 minutes"
 
+or
 
-<img width="452" alt="image" src="https://github.com/user-attachments/assets/c4b2e569-f319-48c4-a9f1-8afa37045b02" />
+> "AI access logs today"
 
+Under the hood, the query is parsed using **spaCy NLP** (`parse_query.py`), categorized and timestamped, and passed to `smart_filter.py`, which filters matching logs. Summaries are generated using a custom summarizer (`summarizer.py`) to output human-readable alerts like:
 
+> “192.168.1.105 attempted to access ChatGPT at 10:42 AM.”
+
+---
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/c4b2e569-f319-48c4-a9f1-8afa37045b02" width="600" alt="Architecture Diagram">
+</p>
+
+---
+
+One of the biggest technical challenges was configuring Snort 3 logging on macOS—especially using Lua configs and preserving logs with `tee` without blocking. Designing the parser to safely monitor logs in near real-time also required careful engineering.
+
+The AI integration also took substantial effort—ensuring natural queries mapped accurately to underlying Snort rules and timestamps.
+
+Through this project, I gained hands-on experience in:
+
+- Packet inspection and Snort rule design
+- Real-time log parsing and structured data modeling
+- AI-enhanced log summarization and dashboard design
+- Building usable, security-focused tooling for educators
+
+**SnortEduGuard** is more than just a demo. It's deployable in real classrooms, labs, and test settings. Rather than punish or surveil, it promotes awareness, integrity, and accountability in academic environments using cybersecurity as a foundation.
 
