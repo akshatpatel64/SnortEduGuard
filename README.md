@@ -59,3 +59,11 @@ Through this project, I gained hands-on experience in:
 
 **SnortEduGuard** is more than just a demo. It's deployable in real classrooms, labs, and test settings. Rather than punish or surveil, it promotes awareness, integrity, and accountability in academic environments using cybersecurity as a foundation.
 
+**Demo and Write-Up**
+
+YouTube Demo (20 minutes): https://youtu.be/F4_onsXjv2s
+
+Medium Technical Breakdown: https://medium.com/@patelaksht24/what-if-your-exam-had-a-firewall-building-snorteduguard-at-bitcamp-2025-ab2a11989283
+
+
+
